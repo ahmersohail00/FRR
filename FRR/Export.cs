@@ -154,7 +154,7 @@ namespace FRR
             
             PdfPCell Base5A = new PdfPCell(new Phrase("\nDetails", FontFactory.GetFont("Arial", 16, Font.BOLD)));
             PdfPCell Base5B = new PdfPCell(new Phrase("\nRs.", FontFactory.GetFont("Arial", 16, Font.BOLD)));
-            PdfPCell Base6A = new PdfPCell(new Phrase("Amount for the month of: July and August, 2017\n\r", FontFactory.GetFont("Arial", 16, Font.NORMAL)));
+            PdfPCell Base6A = new PdfPCell(new Phrase("Amount for the month of: , 2017\n\r", FontFactory.GetFont("Arial", 16, Font.NORMAL)));
             PdfPCell Base6B = new PdfPCell(new Phrase("\n2000\n\r", FontFactory.GetFont("Arial", 16, Font.NORMAL)));
             PdfPCell Base7A = new PdfPCell(new Phrase("\nTotal\n\r", FontFactory.GetFont("Arial", 16, Font.BOLD)));
             PdfPCell Base7B = new PdfPCell(new Phrase("\n2000\n\r", FontFactory.GetFont("Arial", 16, Font.BOLD)));

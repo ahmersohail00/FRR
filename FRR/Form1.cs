@@ -19,7 +19,8 @@ namespace FRR
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            Export.ToPDF();
+            
+            FRR.Export.ToPDF();
         }
     }
 }

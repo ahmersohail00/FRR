@@ -11,6 +11,16 @@ namespace FRR
 {
     static class Export
     {
+        internal static string VoucherNo(int VoucherID)
+        {
+            string Voucher = "";
+            if (VoucherID < 10) Voucher= $"0000{VoucherID}";
+            else if (VoucherID < 100) Voucher= $"000{VoucherID}";
+            else if (VoucherID < 1000) Voucher= $"00{VoucherID}";
+            else if (VoucherID < 10000) Voucher= $"0{VoucherID}";
+            else if (VoucherID < 100000) Voucher= $"{VoucherID}";
+            return Voucher;
+        }
         public static void ToPDF()
         {
 
@@ -154,7 +164,7 @@ namespace FRR
             
             PdfPCell Base5A = new PdfPCell(new Phrase("\nDetails", FontFactory.GetFont("Arial", 16, Font.BOLD)));
             PdfPCell Base5B = new PdfPCell(new Phrase("\nRs.", FontFactory.GetFont("Arial", 16, Font.BOLD)));
-            PdfPCell Base6A = new PdfPCell(new Phrase("Amount for the month of: , 2017\n\r", FontFactory.GetFont("Arial", 16, Font.NORMAL)));
+            PdfPCell Base6A = new PdfPCell(new Phrase("Amount for the month of July, 2017\n\r", FontFactory.GetFont("Arial", 16, Font.NORMAL)));
             PdfPCell Base6B = new PdfPCell(new Phrase("\n2000\n\r", FontFactory.GetFont("Arial", 16, Font.NORMAL)));
             PdfPCell Base7A = new PdfPCell(new Phrase("\nTotal\n\r", FontFactory.GetFont("Arial", 16, Font.BOLD)));
             PdfPCell Base7B = new PdfPCell(new Phrase("\n2000\n\r", FontFactory.GetFont("Arial", 16, Font.BOLD)));

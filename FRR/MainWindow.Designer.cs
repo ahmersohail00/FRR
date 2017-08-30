@@ -30,9 +30,10 @@
         {
             this.btnCreateStudents = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnStudentDetails = new System.Windows.Forms.Button();
             this.btnAllStudents = new System.Windows.Forms.Button();
+            this.btnStudentDetails = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnFeesDetails = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,28 +52,17 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnFeesDetails);
             this.groupBox1.Controls.Add(this.btnAllStudents);
             this.groupBox1.Controls.Add(this.btnStudentDetails);
             this.groupBox1.Controls.Add(this.btnCreateStudents);
             this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(162, 148);
+            this.groupBox1.Size = new System.Drawing.Size(162, 198);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Students";
-            // 
-            // btnStudentDetails
-            // 
-            this.btnStudentDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStudentDetails.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudentDetails.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnStudentDetails.Location = new System.Drawing.Point(21, 101);
-            this.btnStudentDetails.Name = "btnStudentDetails";
-            this.btnStudentDetails.Size = new System.Drawing.Size(119, 29);
-            this.btnStudentDetails.TabIndex = 1;
-            this.btnStudentDetails.Text = "Student Details";
-            this.btnStudentDetails.UseVisualStyleBackColor = true;
             // 
             // btnAllStudents
             // 
@@ -85,6 +75,19 @@
             this.btnAllStudents.TabIndex = 1;
             this.btnAllStudents.Text = "All Students";
             this.btnAllStudents.UseVisualStyleBackColor = true;
+            this.btnAllStudents.Click += new System.EventHandler(this.btnAllStudents_Click);
+            // 
+            // btnStudentDetails
+            // 
+            this.btnStudentDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudentDetails.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudentDetails.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnStudentDetails.Location = new System.Drawing.Point(21, 101);
+            this.btnStudentDetails.Name = "btnStudentDetails";
+            this.btnStudentDetails.Size = new System.Drawing.Size(119, 29);
+            this.btnStudentDetails.TabIndex = 1;
+            this.btnStudentDetails.Text = "Student Details";
+            this.btnStudentDetails.UseVisualStyleBackColor = true;
             // 
             // btnClose
             // 
@@ -99,6 +102,19 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnFeesDetails
+            // 
+            this.btnFeesDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFeesDetails.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFeesDetails.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFeesDetails.Location = new System.Drawing.Point(21, 136);
+            this.btnFeesDetails.Name = "btnFeesDetails";
+            this.btnFeesDetails.Size = new System.Drawing.Size(119, 29);
+            this.btnFeesDetails.TabIndex = 2;
+            this.btnFeesDetails.Text = "Fees Details";
+            this.btnFeesDetails.UseVisualStyleBackColor = true;
+            this.btnFeesDetails.Click += new System.EventHandler(this.btnFeesDetails_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -111,6 +127,7 @@
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -123,6 +140,7 @@
         private System.Windows.Forms.Button btnStudentDetails;
         private System.Windows.Forms.Button btnAllStudents;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnFeesDetails;
     }
 }
 

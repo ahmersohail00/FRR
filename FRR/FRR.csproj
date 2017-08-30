@@ -53,6 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllStudents.Designer.cs">
+      <DependentUpon>AllStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessAccess\Branch.cs" />
     <Compile Include="BusinessAccess\Class.cs" />
     <Compile Include="BusinessAccess\Student.cs" />
     <Compile Include="CreateStudents.cs">
@@ -62,6 +69,13 @@
       <DependentUpon>CreateStudents.cs</DependentUpon>
     </Compile>
     <Compile Include="Export.cs" />
+    <Compile Include="FeesDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeesDetails.Designer.cs">
+      <DependentUpon>FeesDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalData.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,11 +84,19 @@
     </Compile>
     <Compile Include="Models\BranchModel.cs" />
     <Compile Include="Models\ClassModel.cs" />
+    <Compile Include="Models\FeesModel.cs" />
+    <Compile Include="Month.cs" />
     <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AllStudents.resx">
+      <DependentUpon>AllStudents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateStudents.resx">
       <DependentUpon>CreateStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeesDetails.resx">
+      <DependentUpon>FeesDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -87,6 +109,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -101,6 +124,44 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Excel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

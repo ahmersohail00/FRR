@@ -13,7 +13,7 @@ namespace FRR.Models
         public string Address { get; set; }
         public string MobileNo { get; set; }
         public bool IsActive { get; set; }
-        public int RollNo { get; set; }
+        public string RollNo { get; set; }
         public int ClassID { get; set; }
         public int BranchID { get; set; }
         public DateTime EntryTime { get; set; }

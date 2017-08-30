@@ -24,8 +24,27 @@ namespace FRR
 
         private void btnCreateStudents_Click(object sender, EventArgs e)
         {
-            CreateStudents Students = new CreateStudents();
-            Students.ShowDialog();
+            CreateStudents S = new CreateStudents();
+            S.ShowDialog();
+        }
+
+        private void btnAllStudents_Click(object sender, EventArgs e)
+        {
+            AllStudents S = new AllStudents();
+            S.ShowDialog();
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            // MessageBox.Show(new DateTime(1991, 12, 28).Age());
+        }
+
+        private void btnFeesDetails_Click(object sender, EventArgs e)
+        {
+            FeesDetails f = new FeesDetails();
+            f.ShowDialog();
+
+            
         }
     }
 }
